@@ -3,6 +3,9 @@
 
 [build.environment]
   SECRETS_SCAN_OMIT_KEYS = "FIREBASE_API_KEY,FIREBASE_PROJECT_ID,PLAN_ID,STRAVA_VERIFY_TOKEN"
+  # The Firebase web API key is a public client-side identifier by design (access is governed by
+  # Firebase security rules), so Netlify's smart detection must not treat it as a leaked secret.
+  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "AIzaSyC5QoBcLCQR-YwDzLL9FSuHtYd2LbzSHDQ"
 
 [[headers]]
   for = "/sw.js"
