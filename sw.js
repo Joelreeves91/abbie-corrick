@@ -1,4 +1,4 @@
-const CACHE = 'plan-abbie-rome-2027-518b3-35758a13fb';
+const CACHE = 'plan-abbie-rome-2027-518b3-77ee4d2257';
 const PRECACHE = ['/', '/manifest.json', '/icon-192.png', '/icon-512.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(PRECACHE).catch(()=>{})).then(()=>self.skipWaiting()));
